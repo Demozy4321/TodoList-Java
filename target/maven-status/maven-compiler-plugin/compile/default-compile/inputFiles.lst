@@ -1,0 +1,16 @@
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\controllers\TodoController.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\TestApplication.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\repositories\UserRepo.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\DTOs\TodoDtos\TodoEntryDto.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\entity\TodoItems.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\service\MainService.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\repositories\TodoItemsRepo.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\DTOs\TodoDtos\TodoItemDto.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\serviceImpl\MainServiceImpl.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\controllers\MainController.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\serviceImpl\TodoServiceImpl.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\DTOs\ResponseDTO.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\DTOs\TodoDtos\TodoEditDto.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\service\TodoService.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\entity\TodoStatus.java
+D:\test-projects\todolist-project\server\src\main\java\com\example\test\test\entity\UserTable.java

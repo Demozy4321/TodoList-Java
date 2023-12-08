@@ -1,0 +1,16 @@
+com\example\test\test\DTOs\TodoDtos\TodoItemDto.class
+com\example\test\test\DTOs\TodoDtos\TodoEditDto.class
+com\example\test\test\entity\UserTable.class
+com\example\test\test\controllers\TodoController.class
+com\example\test\test\entity\TodoItems.class
+com\example\test\test\DTOs\TodoDtos\TodoEntryDto.class
+com\example\test\test\service\MainService.class
+com\example\test\test\repositories\UserRepo.class
+com\example\test\test\repositories\TodoItemsRepo.class
+com\example\test\test\service\TodoService.class
+com\example\test\test\serviceImpl\TodoServiceImpl.class
+com\example\test\test\TestApplication.class
+com\example\test\test\controllers\MainController.class
+com\example\test\test\DTOs\ResponseDTO.class
+com\example\test\test\entity\TodoStatus.class
+com\example\test\test\serviceImpl\MainServiceImpl.class
