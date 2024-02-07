@@ -1,8 +1,10 @@
 package com.example.test.test.controllers;
 
 import com.example.test.test.entity.UserTable;
+import com.example.test.test.security.UserPrincipal;
 import com.example.test.test.service.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,8 +18,10 @@ public class MainController {
     private MainService mainService;
 
     @GetMapping("/hello")
-    public String hello() {
-        return "hello";
+    public String hello(@AuthenticationPrincipal UserPrincipal principal, @RequestHeader(value = "Authorization") String value) {
+        System.out.println(value);
+        System.out.println(principal);
+        return "hello, this is secured";
     }
 
     @PostMapping("/addUser")
@@ -25,9 +29,14 @@ public class MainController {
          mainService.addUser();
     }
 
-    @GetMapping("/findUser")
+    @GetMapping("/findUsers")
     private List<UserTable> findUser() {
         return mainService.findUser();
+    }
+
+    @GetMapping("/findUser")
+    private UserTable findUserByEmail(String email) {
+        return mainService.findUserByEmail(email);
     }
 
 }

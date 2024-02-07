@@ -10,4 +10,6 @@ public interface MainService {
     void addUser();
 
     List<UserTable> findUser();
+
+    UserTable findUserByEmail(String email);
 }

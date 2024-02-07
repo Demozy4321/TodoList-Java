@@ -1,5 +1,6 @@
 package com.example.test.test.serviceImpl;
 
+import com.example.test.test.entity.UserRole;
 import com.example.test.test.entity.UserTable;
 import com.example.test.test.repositories.UserRepo;
 import com.example.test.test.service.MainService;
@@ -20,6 +21,7 @@ import org.springframework.transaction.TransactionStatus;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Transactional(rollbackFor = Exception.class)
 @Service
@@ -57,6 +59,22 @@ public class MainServiceImpl implements MainService {
         List<UserTable> userTables = entityManager.createQuery(userTableCriteriaQuery).getResultList();
 
         return userTables;
+
+    }
+
+    @Override
+    public UserTable findUserByEmail(String email) {
+
+        UserTable user =  userRepo.findUserByEmail(email);
+
+        if (user != null)
+        {
+            user.setPassword("$2a$12$5mggkfg/azpRXr5bT94TO.NmFvBVZeLEyfWgVuJIwe28qCxvLR9CG");
+            user.setRoles(Set.of(UserRole.ROLE_ADMIN));
+            return user;
+        }
+
+        return new UserTable();
 
     }
 }

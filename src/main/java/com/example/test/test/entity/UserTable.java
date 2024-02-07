@@ -1,5 +1,6 @@
 package com.example.test.test.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -33,5 +35,14 @@ public class UserTable {
     @UpdateTimestamp
     @Column(name = "Updated_On")
     private Date updatedOn;
+
+    @JsonIgnore
+    @Column(length = 500)
+    private String password;
+
+    @ElementCollection(targetClass = UserRole.class)
+    @CollectionTable(name = "User_Roles", joinColumns = @JoinColumn(name = "User_Id"))
+    @Enumerated(EnumType.STRING)
+    private Set<UserRole> roles;
 
 }
